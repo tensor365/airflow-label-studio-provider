@@ -90,20 +90,21 @@ default_args = {
 }
 
 idApp="" #Fill the id of your application you want to reload
-connId="" #Fill the connection id you gave when creating the connection in airflow
+connId="labelStudio" #Fill the connection id you gave when creating the connection in airflow
 
 with DAG(
-    'LabelStudioSyncTask',
+    'LabelStudioSyncTasks',
     default_args=default_args,
     description='A simple tutorial DAG reloading Label Studio Sync Task',
     schedule_interval=timedelta(days=1),
     start_date=days_ago(2),
-    tags=['Label Studio', 'Example'],
+    tags=['LabelStudio', 'Example'],
 ) as dag:
     
-    op = SyncTask(app_id=idApp, conn_id=connId, task_id="QlikReloadTask")
+    op = SyncTask(idTask='2',idProject='4', syncType='azure', conn_id=connId, task_id="LabelStudioSyncTask")
     
     op
+
 
 ```
 
