@@ -59,11 +59,11 @@ class LabelStudioHook(BaseHook):
         URI = f"/api/storages/export/{syncType}/{id}/sync"
         
         body = {
-                "project": projectId
+                "project": idProject
                 }
 
-        self.run(method='POST',endpoint=URI, body=body)
-
+        ans = self.run(method='POST',endpoint=URI, body=body)
+        return ans
 
     def get_conn(self) -> requests.Session:
         """
