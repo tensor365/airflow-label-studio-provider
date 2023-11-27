@@ -56,7 +56,7 @@ class LabelStudioHook(BaseHook):
 
         assert syncType in ['localfiles', 'azure', 'gcs', 's3']
 
-        URI = f"/api/storages/export/{syncType}/{id}/sync"
+        URI = f"/api/storages/export/{syncType}/{idSyncTask}/sync"
         
         body = {
                 "project": idProject
