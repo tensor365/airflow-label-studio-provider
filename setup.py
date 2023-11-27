@@ -5,10 +5,10 @@ from setuptools import find_packages, setup
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-"""Perform the package airflow-provider-talend-tac setup."""
+"""Perform the package airflow-provider-label-studio setup."""
 setup(
     name='airflow-provider-label-studio',
-    version="0.0.2",
+    version="0.0.1",
     description='Airflow package provider to perform action on Label Studio Platform.',
     long_description=long_description,
     long_description_content_type='text/markdown',
