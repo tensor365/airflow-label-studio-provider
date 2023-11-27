@@ -13,7 +13,7 @@
 
 <br/>
 
-This repository provides basic Talend TAC hooks and operators to trigger tasks available in a Talend TAC Site.
+This repository provides basic Label Studio hooks and operators to trigger tasks available in a Label Studio Site.
 
 ## Requirements
 
@@ -45,13 +45,13 @@ python setup.py install
 
 <br/>
 
-### 1. NTLM Authentification Example
+### 1. Authentification Example
 <br/>
 
 **Prerequisites**:  
 <br>
-• A login account with password
-• URL of your Qlik Sense Site (with the virtual proxy using NTLM auth)
+• A Label Studio Token
+• URL of your Label Studio Site
 
 **Step 1**: Login in your Airflow Server. 
 
@@ -61,7 +61,7 @@ python setup.py install
 
 **Step 4** Provide following informations:
 
-**Step 5** Save and your connection to Qlik Client Managed using NTLM auth is ready to use !
+**Step 5** Save and your connection to Label Studio auth is ready to use !
 
 ### 4. Example: Creating a DAG with Label Studio Sync Operator to reload App 
 
