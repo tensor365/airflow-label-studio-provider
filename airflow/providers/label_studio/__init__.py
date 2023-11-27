@@ -7,19 +7,19 @@ def get_provider_info():
         "hook": [
             {
                 "integration-name": "Label Studio Hook",
-                "python-modules": ["airflow.providers.label_studio.hooks.label_studio.LabelStudioHook",
+                "python-modules": ["airflow.providers.label_studio.hooks.label_studio_hook.LabelStudioHook",
                 ]
             }
             ],
         "operators":[
                         {
                             "integration-name": "Label Studio Sync Task Operation",
-                            "python-modules":"airflow.providers.label_studio.operators.label_studio.SyncTask"
+                            "python-modules":"airflow.providers.label_studio.operators.sync_operator.SyncTask"
                         },
         ],
         'connection-types': [
             {
-                'hook-class-name': 'airflow.providers.label_studio.hooks.label_studio.LabelStudioHook',
+                'hook-class-name': 'airflow.providers.label_studio.hooks.label_studio_hook.LabelStudioHook',
                 'connection-type': 'label_studio',
             },
         ],
