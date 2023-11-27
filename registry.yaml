@@ -1,0 +1,22 @@
+
+# Python package name.
+package-name: label_studio_provider
+# The name of the provider to be displayed on the Registry.
+display-name: Label Studio Provider
+# A description to be displayed on the main Provider page.
+description: Provider to run task on Label Studio
+# URL for where user should find the documentation for the Provider. This could be a link to the README,
+# an external docs site, etc.
+#docs_url: https://github.com/astronomer/airflow-provider-sample/blob/main/README.md
+
+# The next sections should be organized by module type (e.g. operators, hooks, functions, decorators, etc.).
+#
+# Within each section, the ``module`` value should be the path.to.the.module.specifically.
+# For example, if the import path for a function is `from sample_provider.hooks.sample_hook import SampleHook` then the
+# value should be "sample_provider.hooks.sample_hook.SampleHook".
+
+hooks:
+  - module: airflow.providers.label_studio.hooks.label_studio_hook.LabelStudioHook
+operators:
+  - module: airflow.providers.label_studio.operators.sync_operator.SyncTask
+
