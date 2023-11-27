@@ -27,10 +27,11 @@ class SyncTask(BaseOperator):
     ui_color = '#e5e7eb'
 
     @apply_defaults
-    def __init__(self, *, idTask: str = None , idProject: str= None, syncType: str =None ,conn_id: str = 'label_studio_conn_sample', **kwargs: Any,) -> None:
+    def __init__(self, *, id_task:str=None, idTask: str = None , idProject: str= None, syncType: str =None ,conn_id: str = 'label_studio_conn_sample', **kwargs: Any,) -> None:
         super().__init__(**kwargs)
         self.conn_id = conn_id
         self.log.info(BaseHook.get_connection(self.conn_id))
+        self.id_task = id_task
         self.conn_type = BaseHook.get_connection(self.conn_id).conn_type
         self.idTask = idTask
         self.idProject = idProject
