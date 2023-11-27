@@ -44,7 +44,7 @@ class LabelStudioHook(BaseHook):
 
         
     def syncTask(self, 
-                id:str = None, 
+                idSyncTask:str = None, 
                 projectId: str = None, 
                 syncType: str = 'localfiles'
                 ):

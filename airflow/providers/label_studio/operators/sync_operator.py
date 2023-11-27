@@ -54,7 +54,7 @@ class SyncTask(BaseOperator):
         hook = LabelStudioHook(conn_id=self.conn_id)
 
         self.log.info("Call HTTP method to reload task with id {}".format(self.idTask))
-        response = hook.syncTask(idTask=self.idTask, idProject=self.idProject, syncType=self.syncType)
+        response = hook.syncTask(idSyncTask=self.idTask, idProject=self.idProject, syncType=self.syncType)
                 
         if response.status_code not in range(200,300):
             raise ValueError('Error when launching Sync Task from Label Studio: {error}'.format(error=response.text))
