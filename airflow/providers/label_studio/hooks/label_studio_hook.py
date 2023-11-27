@@ -83,7 +83,7 @@ class LabelStudioHook(BaseHook):
             host = 'https://'+host
         self.base_url = host
 
-        if self.conn.password != '':
+        if conn.password != '':
             authHeaders = {
                 "Authorization": f"Token {self.conn.password}"
             } 
