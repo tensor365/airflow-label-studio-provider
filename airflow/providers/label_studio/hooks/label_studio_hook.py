@@ -135,7 +135,7 @@ class LabelStudioHook(BaseHook):
 
         prepped = self.session.prepare_request(req)
         try:
-            response = self.session.send(prepped, verify=True, allow_redirects=True)
+            response = self.session.send(prepped, verify=False, allow_redirects=True)
             return response
 
         except requests.exceptions.ConnectionError as ex:
