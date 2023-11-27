@@ -85,7 +85,7 @@ class LabelStudioHook(BaseHook):
 
         if conn.password != '':
             authHeaders = {
-                "Authorization": f"Token {self.conn.password}"
+                "Authorization": f"Token {conn.password}"
             } 
             session.headers = authHeaders
         else: 
