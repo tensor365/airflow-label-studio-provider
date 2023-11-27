@@ -51,6 +51,7 @@ python setup.py install
 
 **Prerequisites**:  
 <br>
+
 • A Label Studio Token
 • URL of your Label Studio Site
 
@@ -66,7 +67,7 @@ python setup.py install
 
 ### 4. Example: Creating a DAG with Label Studio Sync Operator to reload App 
 
-You can now use the operators in your dags to trigger a reload of an app in Qlik Sense from Airflow
+You can now use the operators in your dags to trigger a sync of porject in Label Studio
 
 Example: 
 
@@ -104,8 +105,6 @@ with DAG(
     op = SyncTask(idTask='2',idProject='4', syncType='azure', conn_id=connId, task_id="LabelStudioSyncTask")
     
     op
-
-
 ```
 
 <br/>
