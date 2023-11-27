@@ -5,7 +5,7 @@ from airflow.exceptions import AirflowException
 from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 from airflow.hooks.base_hook import BaseHook
-from airflow.providers.label_studio.hooks.label_studio import LabelStudioHook
+from airflow.providers.label_studio.hooks.label_studio_hook import LabelStudioHook
 
 
 class SyncTask(BaseOperator):
