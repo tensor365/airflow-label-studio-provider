@@ -108,7 +108,4 @@ with DAG(
 
 <br/>
 
-### 6. (Appendix) Configuration of JWT Virtual Proxy
-
-Building Section not available yet
 
