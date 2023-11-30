@@ -8,7 +8,7 @@ from airflow.hooks.base_hook import BaseHook
 from airflow.providers.label_studio.hooks.label_studio_hook import LabelStudioHook
 
 
-class IlmportSyncTask(BaseOperator):
+class ImportSyncTask(BaseOperator):
     """
     Trigger a Sync Task in Label Studio.
 
