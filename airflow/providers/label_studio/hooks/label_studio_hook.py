@@ -43,14 +43,14 @@ class LabelStudioHook(BaseHook):
         return base64.b64encode(json.dumps(body).encode('ascii')).decode('ascii')
 
         
-    def syncTask(self, 
+    def ImportSyncTask(self, 
                 idSyncTask:str = None, 
                 idProject: str = None, 
                 syncType: str = 'localfiles'
                 ):
         """
 
-        Synchronizing Task in Label Studio from a project
+        Synchronizing Import Task in Label Studio from a project
 
         """
 
@@ -64,6 +64,30 @@ class LabelStudioHook(BaseHook):
 
         ans = self.run(method='POST',endpoint=URI, body=body)
         return ans
+
+    def ExportSyncTask(self, 
+                idSyncTask:str = None, 
+                idProject: str = None, 
+                syncType: str = 'localfiles'
+                ):
+        """
+
+        Synchronizing Export Task in Label Studio from a project
+
+        """
+
+        assert syncType in ['localfiles', 'azure', 'gcs', 's3']
+
+        URI = f"/api/storages/{syncType}/export/{idSyncTask}/sync"
+        
+        body = {
+                "project": idProject
+                }
+
+        ans = self.run(method='POST',endpoint=URI, body=body)
+        return ans
+
+
 
     def get_conn(self) -> requests.Session:
         """

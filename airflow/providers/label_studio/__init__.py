@@ -13,8 +13,12 @@ def get_provider_info():
             ],
         "operators":[
                         {
-                            "integration-name": "Label Studio Sync Task Operation",
-                            "python-modules":"airflow.providers.label_studio.operators.sync_operator.SyncTask"
+                            "integration-name": "Label Studio Import Sync Task Operation",
+                            "python-modules":"airflow.providers.label_studio.operators.sync_operator.ImportSyncTask"
+                        },
+                        {
+                            "integration-name": "Label Studio Export Sync Task Operation",
+                            "python-modules":"airflow.providers.label_studio.operators.sync_operator.ExportSyncTask"
                         },
         ],
         'connection-types': [

@@ -18,5 +18,6 @@ description: Provider to run task on Label Studio
 hooks:
   - module: airflow.providers.label_studio.hooks.label_studio_hook.LabelStudioHook
 operators:
-  - module: airflow.providers.label_studio.operators.sync_operator.SyncTask
+  - module: airflow.providers.label_studio.operators.sync_operator.ImportSyncTask
+  - module: airflow.providers.label_studio.operators.sync_operator.ExportSyncTask
 
