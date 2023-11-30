@@ -77,7 +77,7 @@ from airflow import DAG
 from airflow.utils.dates import days_ago
 from datetime import timedelta
 
-from airflow.providers.label_studio.operators.sync_operator import SyncTask
+from airflow.providers.label_studio.operators.sync_operator import ImportSyncTask
 
 
 default_args = {
@@ -102,9 +102,9 @@ with DAG(
     tags=['LabelStudio', 'Example'],
 ) as dag:
     
-    op = SyncTask(idTask='2',idProject='4', syncType='azure', conn_id=connId, task_id="LabelStudioSyncTask")
+    ImportSyncTask = ImportSyncTask(idTask='2',idProject='4', syncType='azure', conn_id=connId, task_id="LabelStudioSyncTask")
     
-    op
+    ImportSyncTask
 ```
 
 <br/>
